@@ -1,28 +1,26 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import { projectData } from '../components/data';
 
-export default function Projects() {
+const Projects = () => {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Meus Projetos - Meu Portfólio</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Meus Projetos
-        </h1>
-
-        <p className={styles.description}>
-          Aqui estão alguns dos meus projetos recentes:
-        </p>
-
-      </main>
-
-      <footer className={styles.footer}>
-        Powered by Next.js
-      </footer>
+    <div className="projects-container">
+      <h2>Projects</h2>
+      <div className="projects-grid">
+        {projectData && projectData.map((project) => (
+          <div className="project-card" key={project.id}>
+            <div className="project-header">
+              <i className="fa-regular fa-folder-open folder-icon"></i>
+              <div className="small-icons">
+                <a href={project.gitHubLink}><i className="fa-brands fa-github"></i></a>
+              </div>
+            </div>
+            <h3>{project.title}</h3>
+            <p>{project.description}</p>
+          </div>
+        ))
+        }
+      </div>
     </div>
   )
 }
+
+export default Projects;
