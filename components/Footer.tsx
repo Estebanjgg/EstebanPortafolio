@@ -14,8 +14,8 @@ export default function Footer() {
   const classes = useStyles();
 
   return (
-    <footer className={classes.footer}>
-      <Container maxWidth="md">
+    <footer className="footer">
+      <Container  >
         <Typography variant="body1">
           Este é o rodapé do meu site.
         </Typography>
