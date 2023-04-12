@@ -4,8 +4,9 @@ import { AppBar, Toolbar, Button, Typography } from '@material-ui/core';
 import Link from 'next/link';
 
 const useStyles = makeStyles((theme) => ({
+  
   root: {
-    flexGrow: 1,
+    
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -13,6 +14,7 @@ const useStyles = makeStyles((theme) => ({
   title: {
     flexGrow: 1,
   },
+
 }));
 
 export default function Navbar() {

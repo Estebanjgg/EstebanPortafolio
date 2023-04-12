@@ -1,13 +1,11 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-import Hero from '../components/Hero'
+import Hero from '../components/Hero/Hero'
+import Skills from '../components/Skills/Skills'
 
 export default function Home() {
   return (
     <>
-      
-
-     <Hero/>
+      <Hero/>
+      <Skills/>
     </>
   )
 }

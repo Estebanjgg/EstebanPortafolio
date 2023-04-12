@@ -1,68 +1,90 @@
-import { Grid, Box, Typography } from '@material-ui/core';
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPhone, faEnvelope, faGlobe, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import { faFacebook, faInstagram, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import Image from "next/image";
 
-function Contacto() {
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    display: 'flex',
+    alignItems: 'center',
+    [theme.breakpoints.down('sm')]: {
+      flexDirection: 'column',
+      alignItems: 'flex-start',
+    },
+  },
+  image: {
+    width: 300,
+    height: 'auto',
+    marginRight: 40,
+    [theme.breakpoints.down('sm')]: {
+      marginRight: 0,
+      marginBottom: 20,
+    },
+  },
+  info: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+  },
+  icon: {
+    marginRight: 10,
+  },
+  link: {
+    display: 'flex',
+    alignItems: 'center',
+    marginBottom: 10,
+  },
+}));
+
+const Contact = () => {
+  const classes = useStyles();
+
   return (
-    <Box sx={{ bgcolor: '#F7DF1E', minHeight: '100vh', display: 'flex', alignItems: 'center' }}>
-      <Grid container justifyContent="center">
-        <Grid item xs={12} md={6}>
-          <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-            <img src="..\images\estaban.jpg" alt="Avatar" width={750} height={750} />
-            <Box>
-              <Typography variant="h3" component="h1">
-                Juan Pérez
-              </Typography>
-              <Typography variant="h6" component="h2">
-                Desarrollador web
-              </Typography>
-            </Box>
-          </Box>
-        </Grid>
-        <Grid item xs={12} md={6}>
-          <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-            <Typography variant="h4" component="h2">
-              Información de contacto
-            </Typography>
-            <Typography variant="body1">
-              <strong>Teléfono:</strong> +1 555 123 4567
-            </Typography>
-            <Typography variant="body1">
-              <strong>Email:</strong> juanperez@example.com
-            </Typography>
-            <Typography variant="body1">
-              <strong>LinkedIn:</strong>{' '}
-              <a href="https://www.linkedin.com/in/juanperez" target="_blank" rel="noopener noreferrer">
-                linkedin.com/in/juanperez
-              </a>
-            </Typography>
-            <Typography variant="body1">
-              <strong>Facebook:</strong>{' '}
-              <a href="https://www.facebook.com/juanperez" target="_blank" rel="noopener noreferrer">
-                facebook.com/juanperez
-              </a>
-            </Typography>
-            <Typography variant="body1">
-              <strong>Instagram:</strong>{' '}
-              <a href="https://www.instagram.com/juanperez" target="_blank" rel="noopener noreferrer">
-                instagram.com/juanperez
-              </a>
-            </Typography>
-            <Typography variant="body1">
-              <strong>GitHub:</strong>{' '}
-              <a href="https://github.com/juanperez" target="_blank" rel="noopener noreferrer">
-                github.com/juanperez
-              </a>
-            </Typography>
-            <Typography variant="body1">
-              <strong>Página personal:</strong>{' '}
-              <a href="https://www.juanperez.com" target="_blank" rel="noopener noreferrer">
-                juanperez.com
-              </a>
-            </Typography>
-          </Box>
-        </Grid>
-      </Grid>
-    </Box>
+    <div className={classes.root} >
+      <img src={'https://i.postimg.cc/gknfjGnW/foto-About.jpg'} alt="Profile" className={classes.image} />
+      <div className={classes.info}>ages
+        <h2>Contact Me</h2>
+        <div className={classes.link}>
+          <FontAwesomeIcon icon={faPhone} className={classes.icon} />
+          <p>+1 (123) 456-7890</p>
+        </div>
+        <div className={classes.link}>
+          <FontAwesomeIcon icon={faEnvelope} className={classes.icon} />
+          <p>hello@example.com</p>
+        </div>
+        <div className={classes.link}>
+          <FontAwesomeIcon icon={faGlobe} className={classes.icon} />
+          <a href="https://www.example.com">www.example.com</a>
+        </div>
+        <div className={classes.link}>
+          <FontAwesomeIcon icon={faMapMarkerAlt} className={classes.icon} />
+          <p>123 Main St, Anytown USA</p>
+        </div>
+        <div className={classes.link}>
+          <FontAwesomeIcon icon={faFacebook} className={classes.icon} />
+          <a href="https://www.facebook.com/example"><p>Facebook</p></a>
+        </div>
+        <div className={classes.link}>
+          <FontAwesomeIcon icon={faInstagram} className={classes.icon} />
+          <a href="https://www.instagram.com/example"><p>Instagram</p></a>
+        </div>
+        <div className={classes.link}>
+          <FontAwesomeIcon icon={faLinkedin} className={classes.icon} />
+          <a href="https://www.linkedin.com/in/example"><p>LinkedIn</p></a>
+        </div>
+        <div className={classes.link}>
+          <FontAwesomeIcon icon={faGithub} className={classes.icon} />
+          <a href="https://www.github.com/example"><p>GitHub</p></a>
+        </div>
+        
+      </div>
+     
+     
+    </div>
   );
-}
+};
 
-export default Contacto;
+export default Contact;
