@@ -1,0 +1,81 @@
+
+.aboutcontainer {
+  padding: 2rem 0;
+  
+}
+
+.aboutcontainer h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  align-content: center;
+}
+
+.aboutcontainer .flexabout {
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 2rem;
+}
+
+.aboutcontainer .flexabout .abouttext {
+  width: 50%;
+}
+
+.aboutcontainer .flexabout .abouttext p {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.aboutcontainer .flexabout .aboutimg {
+  width: 50%;
+}
+
+.aboutcontainer .flexabout .aboutimg .profileimg {
+  overflow: hidden;
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border: 2px solid #DADADB;
+  filter: grayscale(100%);
+  transition: all 0.5s ease-in-out;
+  cursor: cell;
+}
+
+.aboutcontainer .flexabout .aboutimg .profileimg:hover {
+  filter: grayscale(0%);
+  transform: scale(1.02);
+}
+
+@media screen and (max-width: 768px) {
+  .aboutcontainer .flexabout {
+    flex-direction: column;
+  }
+
+  .aboutcontainer .flex-about .abouttext {
+    width: 100%;
+  }
+
+  .aboutcontainer .flexabout .aboutimg {
+    width: 100%;
+  }
+}
+
+/* Skills */
+.skillscontainer {
+  padding: 2rem 0;
+}
+
+.skillscontainer h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.skillscontainer .gridskills {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
