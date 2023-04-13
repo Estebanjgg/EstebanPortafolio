@@ -1,14 +1,17 @@
-import styles from './Footer.module.css'
+import Image from "next/image";
+import styles from './Hero.module.css'
 
-const Footer = () => {
+const Hero = () => {
   return (
-    <>
-      <hr/>
-      <div className={styles.footercontainer}>
+    <div className={styles.herocontainer}>
+      <Image src={'https://i.postimg.cc/wjfTG79c/IMG-20230311-163230.jpg'} className={styles.profileimg} width={300} height={300} alt="Joe's personal headshot" />
+      <div className={styles.herotext}>
+        <h1>Hey, I'm Esteban Gonzalez 👋</h1>
         <p>
-          © {new Date().getFullYear()} Joel's Portfolio
+          I'm a software developer based in Lagos, Nigeria. I specialize in building (and occasionally designing)
+          exceptional websites, applications, and everything in between.
         </p>
-        <div className="social_icons">
+        <div className={styles.socialicons}>
           <a
             href="https://twitter.com/olawanle_joel"
             aria-label="Twitter"
@@ -35,8 +38,8 @@ const Footer = () => {
           </a>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 
-export default Footer;
+export default Hero;

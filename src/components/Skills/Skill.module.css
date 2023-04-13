@@ -1,0 +1,71 @@
+/* Skills */
+.skillscontainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem 0;
+  }
+  
+  .skillscontainer h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    
+  }
+  
+  .gridskills {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .skillscontainer .gridskills {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  .skillscontainer .gridskills .skillcard {
+    background-color: #DADADB;
+    color: #1D1E20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s ease-in-out;
+    cursor: context-menu;
+  }
+  
+  .skillscontainer .gridskills i {
+    font-size: 1.5rem;
+  }
+  
+  .skillscontainer .gridskills .html:hover {
+    background-color: #E34F26;
+  }
+  
+  .skillscontainer .gridskills .css:hover {
+    background-color: #264DE4;
+  }
+  
+  .skillscontainer .gridskills .js:hover {
+    background-color: #F7DF1E;
+  }
+  
+  .skillscontainer .gridskills .react:hover {
+    background-color: #61DAFB;
+  }
+  
+  .skillscontainer .gridskills .node:hover {
+    background-color: #339933;
+  }
+  
+  .skillcontainer .gridskills .python:hover {
+    background-color: #3776AB;
+  }

@@ -1,0 +1,60 @@
+/* Hero */
+
+.herocontainer {
+  width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem 0;
+  }
+  
+  .profileimg {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 auto;
+    object-fit: cover;
+  }
+  
+  .herotext {
+    text-align: center;
+    margin: 1rem 0;
+    width: 80%;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .herocontainer .herotext {
+      width: 100%;
+    }
+  }
+  
+  .herocontainer .herotext h2 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .herocontainer .herotext p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+  
+  .herocontainer .socialicons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 1rem;
+  }
+  
+  .herocontainer .socialicons a {
+    color: #9B9C9D;
+    font-size: 1.5rem;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .herocontainer .socialicons a:hover {
+    color: #DADADB;
+  }
