@@ -1,8 +1,10 @@
+import styles from './Footer.module.css'
+
 const Footer = () => {
   return (
     <>
       <hr/>
-      <div className="footer-container">
+      <div className={styles.footercontainer}>
         <p>
           © {new Date().getFullYear()} Joel's Portfolio
         </p>
