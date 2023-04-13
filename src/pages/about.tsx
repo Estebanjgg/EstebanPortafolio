@@ -2,10 +2,11 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <div className="about-container">
-      <h2>About Me</h2>
+    <div className="about-container" >
+      
       <div className="flex-about">
-        <div className="about-text">
+        <div  className="about-text">
+        <h2 >About Me </h2>
           <p>
             As a developer, I have always been passionate about creating elegant and effective solutions to
             complex problems. I have a strong foundation in software development, with a focus on web
@@ -20,7 +21,7 @@ const About = () => {
             my skills and knowledge.</p>
         </div>
         <div className="about-img">
-          <Image src='/images/about.jpeg' alt="" className="profile-img" width={300} height={500}/>
+          <Image src={'https://i.postimg.cc/76h1m2nf/imagen-About.jpg'}  alt="" className="profile-img" width={300} height={500}/>
         </div>
       </div>
     </div>
