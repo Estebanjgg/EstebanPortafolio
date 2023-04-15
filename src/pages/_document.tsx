@@ -11,7 +11,8 @@ export default function Document() {
           integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
           crossOrigin="anonymous"          
         />
-      </Head>
+      </Head>     
+   
       <body>
       <Main />
       <NextScript />
