@@ -1,71 +1,174 @@
-/* Skills */
 .skillscontainer {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 2rem 0;
-  }
+  margin: 2rem auto 5rem;
+  max-width: 960px;
+}
+.h2 {
+	font-size: 2.2rem;
+	font-weight: 600;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 1rem;
+	max-width: 80%;
+	text-align: center; 
+ 
+}
+
+.gridskills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 2rem;
+  margin-top: 2rem;
+}
+
+.skillcard {
+  background-color: #333;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 150px;
+  padding: 1rem;
+  animation: skill 7s ease-in-out 0s infinite normal backwards;
+}
+
+.skillcard:hover {
+  transform: scale(1.05);
   
-  .skillscontainer h2 {
-    font-size: 2rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    
-  }
-  
+}
+
+.html:hover {
+  background-color: #E34F26;
+  animation: myAnim 2s ease 0s 1 normal forwards;
+}
+
+.css:hover {
+  background-color: red; 
+  animation: myAnim 2s ease 0s 1 normal forwards;
+}
+
+
+.js:hover {
+  background-color: #F7DF1E; 
+  animation: myAnim 2s ease 0s 1 normal forwards;
+ 
+}
+
+
+.react:hover {
+  background-color: #61DAFB; 
+  animation: myAnim 2s ease 0s 1 normal forwards;
+}
+
+
+.node:hover {
+  background-color: #339933;
+  animation: myAnim 2s ease 0s 1 normal forwards;
+}
+
+
+.python:hover {
+  background-color: #3776AB;
+   animation: myAnim 2s ease 0s 1 normal forwards;
+}
+
+.sqlmanager:hover {
+  background-color: #332a61;
+  animation: myAnim 2s ease 0s 1 normal forwards;
+}
+
+
+.mongodb:hover {
+  background-color: #c3eaa6;
+ animation: myAnim 2s ease 0s 1 normal forwards;
+}
+
+@keyframes skill {
+	0%,
+	50%,
+	100% {
+		opacity: 1;
+	}
+
+	25%,
+	75% {
+		opacity: 0;
+	}
+}
+
+
+
+@keyframes myAnim {
+	0% {
+		transform: scale3d(1, 1, 1);
+	}
+
+	30% {
+		transform: scale3d(1.25, 0.75, 1);
+	}
+
+	40% {
+		transform: scale3d(0.75, 1.25, 1);
+	}
+
+	50% {
+		transform: scale3d(1.15, 0.85, 1);
+	}
+
+	65% {
+		transform: scale3d(0.95, 1.05, 1);
+	}
+
+	75% {
+		transform: scale3d(1.05, 0.95, 1);
+	}
+
+	100% {
+		transform: scale3d(1, 1, 1);
+	}
+}
+@media screen and (max-width: 768px) {
+	.h2 {
+		font-size: 1.8rem;
+		max-width: 100%;
+		margin-left: 1rem;
+		margin-right: 1rem;
+	  }
   .gridskills {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
+	grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-gap: 1rem;
+    margin-top: 1rem;
   }
   
-  @media screen and (max-width: 768px) {
-    .skillscontainer .gridskills {
-      grid-template-columns: repeat(2, 1fr);
-    }
+  .skillcard {
+	height: 120px;
+  }
+
+  .skillcard .icon {
+    font-size: 4rem;
   }
   
-  .skillscontainer .gridskills .skillcard {
-    background-color: #DADADB;
-    color: #1D1E20;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0 1rem;
-    padding: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    transition: all 0.5s ease-in-out;
-    cursor: context-menu;
+  .html-icon,
+  .css-icon,
+  .js-icon,
+  .react-icon,
+  .node-icon,
+  .python-icon {
+    font-size: 4rem;
   }
-  
-  .skillscontainer .gridskills i {
-    font-size: 1.5rem;
-  }
-  
-  .skillscontainer .gridskills .html:hover {
-    background-color: #E34F26;
-  }
-  
-  .skillscontainer .gridskills .css:hover {
-    background-color: #264DE4;
-  }
-  
-  .skillscontainer .gridskills .js:hover {
-    background-color: #F7DF1E;
-  }
-  
-  .skillscontainer .gridskills .react:hover {
-    background-color: #61DAFB;
-  }
-  
-  .skillscontainer .gridskills .node:hover {
-    background-color: #339933;
-  }
-  
-  .skillcontainer .gridskills .python:hover {
-    background-color: #3776AB;
+}
+@media only screen and (max-width: 480px) {
+	.h2 {
+	  font-size: 1.5rem;
+	}
+	
+	.skillcard {
+	  height: 100px;
+	  padding: 0.5rem;
+	}
+	
+	.skillcard .icon {
+	  font-size: 3rem;
+	}
   }

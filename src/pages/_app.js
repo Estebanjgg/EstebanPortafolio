@@ -7,8 +7,7 @@ import ThemeSwitcher from "../components/ThemeSwitcher/ThemeSwitcher";
 
 function MyApp({ Component, pageProps }) {
   const [theme, setTheme] = useState("light");
-  const currentTheme = theme === "light" ? LightTheme : DarkTheme;
- 
+  const currentTheme = theme === "light" ? LightTheme : DarkTheme; 
 
   return (
      <Layout>  

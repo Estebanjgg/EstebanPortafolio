@@ -15,13 +15,6 @@ body {
   padding: 0;
 }
 
-@media screen and (max-width: 768px) {
-  body {
-    width: 100%;
-    padding: 0 2rem;
-  }
-}
-
 a {
   text-decoration: none;
   color: #DADADB;
@@ -32,14 +25,10 @@ li {
 }
 
 @media screen and (max-width: 768px) {
-  /* Make the footer responsive */
-  .footercontainer {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  body {
+    width: 100%;
+    padding: 0 ;
   }
-  
-  .socialicons {
-    margin-top: 1rem;
-  }
+ 
+ 
 }

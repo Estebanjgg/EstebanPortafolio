@@ -1,29 +1,30 @@
 import Image from "next/image";
 import styles from './aboutTemplete.module.css'
+import { useTranslation} from 'react-i18next';
+import i18n from '../../../i18n';
 
 
 const AboutTemplete = () => {
+  const { t } = useTranslation();
   return (
-    <div className={styles.aboutcontainer} >
+
+
+    <div className={styles.container}>
       
-      <div className={styles.flexabout}>
-        <div  className={styles.aboutText}>
-        <h2 >About Me </h2>
-          <p>
-            As a developer, I have always been passionate about creating elegant and effective solutions to
-            complex problems. I have a strong foundation in software development, with a focus on web
-            technologies such as HTML, CSS, and JavaScript. I enjoy working on both the front-end and
-            back-end of applications, and I am always looking for ways to optimize performance, improve user
-            experience, and ensure the highest level of code quality.
-          </p>
-          <p>Throughout my career, I have worked on a wide range of projects, from simple static websites to
-            complex enterprise-level applications. I am experienced in working with a variety of development
-            tools and frameworks, including React, Angular, Vue.js, Node.js, and Laravel. I am always eager
-            to learn and explore new technologies, and I am constantly seeking out opportunities to improve
-            my skills and knowledge.</p>
-        </div>
-        <div className={styles.aboutimg}>
-          <Image src={'https://i.postimg.cc/76h1m2nf/imagen-About.jpg'}  alt="" className={styles.profileimg} width={300} height={500}/>
+      <div className={styles.aboutcontainer}>
+        
+        <div className={styles.flexabout}>
+          <div className={styles.aboutimg}>
+            <Image src={'https://i.postimg.cc/76h1m2nf/imagen-About.jpg'}  alt="" className={styles.profileimg} width={300} height={500}/>
+          </div>
+          <div className={styles.aboutText}>
+          <h1>{t('aboutMe')}</h1>
+          <button onClick={() => i18n.changeLanguage('es')}>Español</button>
+          <button onClick={() => i18n.changeLanguage('en')}>English</button>
+          <button onClick={() => i18n.changeLanguage('pt')}>Portugues</button>
+          <button onClick={() => i18n.changeLanguage('ko')}>Koreano</button>
+          <p>{t('bio')}</p>
+          </div>
         </div>
       </div>
     </div>

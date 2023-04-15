@@ -1,11 +1,12 @@
-import styles from './Skill.module.css'
 
-const Skills = () => {
+  import styles from "./Skill.module.css";
+
+  const Skills = () => {
     return (
       <div className={styles.skillscontainer}>
-        <h2>Skills</h2>
+        <h2 className={styles.h2}>Skills</h2>
         <div className={styles.gridskills}>
-          <div className={`${styles.skillcard} ${styles.html}`} >
+          <div className={`${styles.skillcard} ${styles.html}`}>
             <i className="fa-brands fa-html5 html-icon"></i>
             <p>HTML</p>
           </div>
@@ -29,9 +30,18 @@ const Skills = () => {
             <i className="fa-brands fa-python python-icon"></i>
             <p>Python</p>
           </div>
+          <div className={`${styles.skillcard} ${styles.sqlmanager}`}>
+              <i className="fas fa-database sqlmanager-icon"></i>
+              <p>SqlManager</p>
+            </div>
+            <div className={`${styles.skillcard} ${styles.mongodb}`}>
+              <i className="fas fa-database mongodb-icon"></i>
+              <p>MongoDB</p>         
+          </div>
         </div>
+        <br></br>
       </div>
-    )
-  }
-  
+    );
+  };
+
   export default Skills;
