@@ -1,38 +1,46 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfolio
 
-## Getting Started
+This is my personal portfolio, where you can find information about me, my projects and skills. This portfolio has been created using Next.js technology, which has allowed me to build a highly performant and scalable web application. Also, Next.js has given me the flexibility to use different tools and libraries, which has resulted in a clean and attractive design for the users, I hope you enjoy it!
 
-First, run the development server:
+# Initializing the project
+To initialize the project, you must first install the necessary dependencies. You can do this using yarn or npm at the command line:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+yarn install
+
+```
+or
+
+```bash
+ npm install
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Once the dependencies have been installed, you can run the project using the following command:
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+```bash
+yarn dev
+```
+or
+```bash
+npm run dev
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```
+This will start the development server, and you can view the application in your browser at localhost:3000.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+# Project Example
+If you are interested in seeing an example of my work, you can check my personal portfolio, which has been created with Next.js technology and you can find it in the following link:
 
-## Learn More
+![Screenshot_6](https://user-images.githubusercontent.com/91167097/233067432-5ddaf189-014e-418a-ae35-cb6bc5350bc3.png)
 
-To learn more about Next.js, take a look at the following resources:
+<p align="center">
+  
+  <a href="https://esteban-portafolio.vercel.app">
+    <img src="https://img.shields.io/badge/-Visita%20mi%20Portafolio-blue?style=for-the-badge&logo=vercel&logoColor=black" alt="Visita mi Portafolio">
+  </a>
+  
+</p>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This button will take you directly to my personal portfolio, I hope you enjoy it! If you have any comments or suggestions, feel free to contact me.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
