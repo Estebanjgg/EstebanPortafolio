@@ -1,10 +1,10 @@
 .herocontainer {
   width: 100%;
+  height: calc(100vh - 60px - 40px); /* Ajusta los valores según la altura de tu navbar y footer */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
- 
 }
 
 .profileimg {
