@@ -17,6 +17,7 @@
     flex-direction: column;
     text-align: center;
     font-size: 14px;
+    padding: 1rem 0;
   }
 }
 
@@ -27,6 +28,27 @@
   flex-wrap: wrap;
   gap: 1rem;
   margin-top: 1rem;
+}
+
+/* Estilos específicos para dispositivos con un ancho de pantalla de 768px o más */
+@media (min-width: 768px) {
+  .socialicons {
+    gap: 2rem;
+  }
+}
+
+/* Estilos específicos para dispositivos con un ancho de pantalla de 1024px o más */
+@media (min-width: 1024px) {
+  .socialicons {
+    gap: 3rem;
+  }
+}
+
+/* Estilos específicos para dispositivos con un ancho de pantalla de 1200px o más */
+@media (min-width: 1200px) {
+  .socialicons {
+    gap: 4rem;
+  }
 }
 
 .socialicons a {
