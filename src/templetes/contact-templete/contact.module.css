@@ -1,9 +1,12 @@
 .container {
+  height: calc(100vh - 60px - 40px);
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 3rem 1rem;
   width: auto;
+  margin-top: 60px; /* Añadimos un margen superior igual a la altura del navbar */
+  margin-bottom: 40px; 
 }
 
 .infoContainer {
@@ -38,6 +41,7 @@
 .image {
   width: 100%;
   max-width: 600px;
+  margin-bottom: 40px;
 }
 
 .rounded-image {
