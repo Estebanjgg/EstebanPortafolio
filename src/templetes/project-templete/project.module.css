@@ -1,12 +1,11 @@
 /* Projects */
 
 .projectsContainer {
+  padding: 10rem 0;  
   padding: 10rem 0;
-  height: calc(100vh - 60px - 40px);
-  padding: 10rem 0;
-  height: calc(100vh - 60px - 40px);
-  max-width: 1200px; /* Ancho máximo del contenedor */
-  margin: auto; /* Centrar horizontalmente */
+  max-width: 1200px; 
+  margin: auto;
+
 }
 
 .projectsContainer h2 {
