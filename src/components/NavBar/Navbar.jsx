@@ -7,9 +7,7 @@ const Navbar = () => {
      
     <nav className={styles.navbar}>
       <div className={styles.logo}>
-        <Link href="/" legacyBehavior>
-          <a>Logo</a>
-        </Link>
+        
       </div>
       <div className={styles.links}>
         <Link href="/" legacyBehavior>
