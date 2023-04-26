@@ -1,37 +1,37 @@
 export const projectData = [
     {
       id: 1,
-      title: 'Todo List App',
+      title: 'Personal portfolio',
       description:
-        'A simple Todo List App built with JavaScript. All datas are stored in localstorage. It helps users check list out their plans and tick as they do them.',
-      gitHubLink: 'https://github.com/olawanlejoel/Todo-List-App',
+        'This project was developed with next.js has several layers .',
+      gitHubLink: 'https://github.com/Estebanjgg/EstebanPortafolio',
     },
     {
       id: 2,
-      title: 'Books Library App',
+      title: 'Quotes Generator Naruto',
       description:
-        'A simple Book Library App built with JavaScript. It helps readers have a good list of books they are either currently reading or have finished reading.',
-      gitHubLink: 'https://github.com/olawanlejoel/Book-Library',
+        'It is a random quote generator of various naruto characters with different images.',
+      gitHubLink: 'https://github.com/Estebanjgg/generador-citas-naruto',
     },
     {
       id: 3,
-      title: 'Quotes Generator',
+      title: 'Home Bead Organizer',
       description:
-        'Helps you generate quotes from about 1600 quotes written by different authors . Quotes are automatically copied to your clipboards.',
-      gitHubLink: 'https://github.com/olawanlejoel/random-quote-generator',
+        'This project was created for the management of household account calculations, allowing users to keep track of shared expenses and debts.',
+      gitHubLink: 'https://github.com/Estebanjgg/conta-hogar',
     },
     {
       id: 4,
-      title: 'Password Generator',
+      title: 'ChatGPT 3.5 + Slack Bot',
       description:
-        'Helps you generates random passwords, you can select what you want your password to entail and also you can copy generated password to clipboard.',
-      gitHubLink: 'https://github.com/olawanlejoel/Password-Generator',
+        'This project integrates OpenAIs ChatGPT 3.5 language model with Slack using the Slack Bolt library for Python. The bot responds to questions and requests in Slack..',
+      gitHubLink: 'https://github.com/Estebanjgg/chatgpt---slack',
     },
     {
       id: 5,
-      title: 'Twitter UI Clone',
+      title: 'Hangman and guessing game on the terminal ',
       description:
-        'Simple Twitter UI clone built with TailwindCSS and Vue Js. This covers only the homepage of Twitter UI. This is cool to get started with TailwindCSS as it helps understand basic concepts.',
-      gitHubLink: 'https://github.com/olawanlejoel/TwitterUI-clone',
+        'This was developed in very simple python but with valuable object oriented concepts..',
+      gitHubLink: 'https://github.com/Estebanjgg/jogos',
     },
   ];
