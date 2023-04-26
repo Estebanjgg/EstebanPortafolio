@@ -58,15 +58,12 @@
   max-height: 500px;
   object-fit: cover;
   border: 2px solid #dadadb;
-  filter: grayscale(100%);
-  transition: all 0.5s ease-in-out;
+  
   cursor: cell;
+  border-radius: 23px; /* Redondea las puntas de la imagen */
+  transition: transform 0.5s ease-in-out; /* Cambia la animación de transición */
 }
 
-.aboutcontainer .flexabout .aboutimg .profileimg:hover {
-  filter: grayscale(0%);
-  transform: scale(1.02);
-}
 
 @media screen and (min-width: 768px) {
   .aboutcontainer .flexabout {

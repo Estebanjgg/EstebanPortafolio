@@ -1,11 +1,9 @@
 /* Projects */
 
 .projectsContainer {
-  padding: 10rem 0;  
   padding: 10rem 0;
-  max-width: 1200px; 
+  max-width: 1200px;
   margin: auto;
-
 }
 
 .projectsContainer h2 {
@@ -27,8 +25,8 @@
 }
 
 .projectCard {
-  border: 1px solid #e6e6e6;
-  padding: 20px;
+  border: 1px solid #372772;
+  padding: 20px 20px 60px 20px;
   border-radius: 5px;
   position: relative;
   overflow: hidden;
@@ -56,8 +54,13 @@
 }
 
 .projectCard .folder-icon {
-  font-size: 35px;
-  color: #ffcc17;
+  font-size: 3em; /* Cambia el valor 3 para ajustar el tamaño */
+  color: #FFD700; /* Cambia "#FFD700" por el código de color deseado */
+  transition: all 0.5s ease; /* Agrega una animación de transición */
+}
+
+.projectCard:hover .folder-icon {
+  transform: scale(1.2); /* Agrega una animación de escala en hover */
 }
 
 .projectHeader .smallicons {
@@ -72,7 +75,7 @@
 }
 
 .projectCard .smallicons a:hover {
-  color: #ffcc17;
+  color: #ff17b9;
 }
 
 .projectCard .project h3 {
@@ -90,12 +93,73 @@
   .projectsContainer {
     padding: 5rem 0;
   }
-  
+
   .projectCard .projectImg {
     position: relative;
   }
-  
+
   .projectCard:hover .projectImg {
     transform: none;
   }
 }
+.projectCard .smallicons a .fa-facebook-f {
+  font-size: 2.5em;
+  color: #000;
+}
+.smallicons {
+  position: absolute;
+  bottom: 10px; /* Ajusta la posición vertical del botón */
+  left: 50%; /* Centra horizontalmente el botón */
+  transform: translateX(-50%); /* Centra horizontalmente el botón */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+}
+
+.smallicons a {
+  text-decoration: none;
+}
+.smallicons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  }
+  
+  .smallicons a {
+  text-decoration: none;
+  }
+  
+  .smallicons button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: #24292e;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  margin-left: 350PX;
+  margin-bottom: 10px;
+  }
+  
+  .smallicons button:hover {
+  background-color: #0366d6;
+  transform: scale(1.1);
+  }
+  
+  .smallicons .btn-text {
+  margin-left: 5px;
+  }

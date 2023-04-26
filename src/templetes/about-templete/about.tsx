@@ -2,10 +2,12 @@ import Image from "next/image";
 import styles from './aboutTemplete.module.css'
 import { useTranslation} from 'react-i18next';
 import i18n from '../../../i18n';
+import React, { useState } from 'react';
 
 
 const AboutTemplete = () => {
   const { t } = useTranslation();
+  const [language, setLanguage] = useState('en');
   return (
 
 
