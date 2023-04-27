@@ -4,18 +4,19 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import styles from './AcademicFormation.module.css';
-
+import {dir} from 'i18next'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
   const AcademicFormation = ({ trainings, courses }) => {
     const settingsTrainings = {
       dots: false,
       infinite: true,
       speed: 500,
-      slidesToShow: 3,
+      slidesToShow: 2,
       slidesToScroll: 1,
       variableWidth: true,
       autoplay: true,
-      autoplaySpeed: 2500,
+      autoplaySpeed: 1000,
       cssEase: 'linear',
       rtl: true,
       additionalTransform: 50,
@@ -29,7 +30,7 @@ import styles from './AcademicFormation.module.css';
       slidesToScroll: 1,
       variableWidth: true,
       autoplay: true,
-      autoplaySpeed: 2500,
+      autoplaySpeed: 1000,
       cssEase: 'linear',
       rtl: true,
     };
@@ -64,6 +65,8 @@ import styles from './AcademicFormation.module.css';
                   <div className={styles.itemInfo}>
                     <h3>{course.title}</h3>
                     <p>{course.year}</p>
+                    <a href={course.urlCredencial} target="_blank" rel="noopener noreferrer" className={styles.teste}> Mostrar credencial <i class="fa fa-rocket" aria-hidden="true"></i></a>
+                    
                   </div>
                 </div>
               ))}

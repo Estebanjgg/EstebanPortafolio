@@ -24,7 +24,7 @@ export default function Home() {
 
   useEffect(() => {
     async function fetchData() {
-      const response = await fetch('https://gist.githubusercontent.com/Estebanjgg/30ef12d5d2a598ec3c75bc79b8cf9b78/raw/7609e155d072f8e517092000c4df267530539229/dataFormation.json');
+      const response = await fetch('https://gist.githubusercontent.com/Estebanjgg/30ef12d5d2a598ec3c75bc79b8cf9b78/raw/4a7b8d6545ea55f524799faef36f4789103e7427/dataFormation.json');
       const jsonData = await response.json();
       setFormationData(jsonData);
     }
