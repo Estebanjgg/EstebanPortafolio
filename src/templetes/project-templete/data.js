@@ -5,7 +5,7 @@ export const projectData = [
       description:
         'This project was developed with next.js has several layers .',
       gitHubLink: 'https://github.com/Estebanjgg/EstebanPortafolio',
-      gitHubLinkDemo:'',
+      gitHubLinkDemo:'https://esteban-portafolio.vercel.app/es',
     },
     {
       id: 2,
@@ -13,7 +13,7 @@ export const projectData = [
       description:
         'It is a random quote generator of various naruto characters with different images.',
       gitHubLink: 'https://github.com/Estebanjgg/generador-citas-naruto',
-      gitHubLinkDemo:'',
+      gitHubLinkDemo:'https://estebanjgg.github.io/generador-citas-naruto/',
     },
     {
       id: 3,
@@ -21,7 +21,7 @@ export const projectData = [
       description:
         'This project was created for the management of household account calculations, allowing users to keep track of shared expenses and debts.',
       gitHubLink: 'https://github.com/Estebanjgg/conta-hogar',
-      gitHubLinkDemo:'',
+      gitHubLinkDemo:'https://estebanjgg.github.io/conta-hogar/',
     },
     {
       id: 4,
