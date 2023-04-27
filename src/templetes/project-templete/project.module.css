@@ -2,7 +2,7 @@
 
 .projectsContainer {
   padding: 10rem 0;
-  max-width: 1200px;
+  max-width: 1600px;
   margin: auto;
 }
 
@@ -25,13 +25,19 @@
 }
 
 .projectCard {
+  display: flex;
+  flex-direction: column;
   border: 1px solid #372772;
-  padding: 20px 20px 60px 20px;
+  padding: 20px;
   border-radius: 5px;
   position: relative;
   overflow: hidden;
+  height: 100%;
 }
-
+.projectCard .projectContent {
+  flex-grow: 1;
+  margin-bottom: 20px; /* Ajusta este valor para cambiar el espacio entre el texto y los botones */
+}
 .projectCard:hover .projectImg {
   transform: scale(1.2);
 }
@@ -54,20 +60,29 @@
 }
 
 .projectCard .folder-icon {
-  font-size: 3em; /* Cambia el valor 3 para ajustar el tamaño */
-  color: #FFD700; /* Cambia "#FFD700" por el código de color deseado */
-  transition: all 0.5s ease; /* Agrega una animación de transición */
+  font-size: 3em;
+  color: #FFD700;
+  transition: all 0.5s ease;
 }
 
 .projectCard:hover .folder-icon {
-  transform: scale(1.2); /* Agrega una animación de escala en hover */
+  transform: scale(1.2);
 }
 
-.projectHeader .smallicons {
+.projectCard .projectFooter {
+  
   display: flex;
-  gap: 0 5px;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 20px; /* Asegura que los botones estén alineados al fondo de la tarjeta */
+  margin-bottom: 20px;
 }
-
+.projectCard:hover .folder-icon {
+  transform: scale(1.2);
+}
+.projectCard .projectFooter a:hover {
+  color: #ff17b9;
+}
 .projectCard .smallicons a {
   margin-right: 5px;
   cursor: pointer;
@@ -85,7 +100,7 @@
 
 .projectCard .project p {
   font-size: 16px;
-  margin-bottom: 10px;
+  margin-bottom: 60px; /* Aumenta este valor para agregar más espacio entre el texto y los botones */
   color: #b3b3b3;
 }
 
@@ -102,64 +117,35 @@
     transform: none;
   }
 }
-.projectCard .smallicons a .fa-facebook-f {
-  font-size: 2.5em;
-  color: #000;
-}
-.smallicons {
-  position: absolute;
-  bottom: 10px; /* Ajusta la posición vertical del botón */
-  left: 50%; /* Centra horizontalmente el botón */
-  transform: translateX(-50%); /* Centra horizontalmente el botón */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 50px;
+
+
+
+.projectCard .projectFooter a {
+  text-decoration: none;
 }
 
-.smallicons a {
-  text-decoration: none;
-}
-.smallicons {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  }
-  
-  .smallicons a {
-  text-decoration: none;
-  }
-  
-  .smallicons button {
+.projectCard .projectFooter button {
+  gap: 5px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   border: none;
-  background-color: #24292e;
-  color: #fff;
+  background-color: #000000;
+  color: #ffffff;
   font-size: 1rem;
   font-weight: bold;
   padding: 12px 20px;
   border-radius: 5px;
   cursor: pointer;
   transition: all 0.3s ease;
-  margin-top: 10px;
-  margin-left: 350PX;
-  margin-bottom: 10px;
-  }
   
-  .smallicons button:hover {
-  background-color: #0366d6;
+}
+
+.projectCard .projectFooter button:hover {
+  background-color: #089788;
   transform: scale(1.1);
-  }
-  
-  .smallicons .btn-text {
+}
+
+.projectCard .projectFooter .btn-text {
   margin-left: 5px;
-  }
+}

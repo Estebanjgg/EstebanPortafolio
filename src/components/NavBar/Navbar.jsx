@@ -6,9 +6,6 @@ const Navbar = () => {
   return (
      
     <nav className={styles.navbar}>
-      <div className={styles.logo}>
-        
-      </div>
       <div className={styles.links}>
         <Link href="/" legacyBehavior>
           <a>Home</a>
@@ -22,6 +19,12 @@ const Navbar = () => {
         <Link href="/projects" legacyBehavior>
           <a>Projects</a>
         </Link>
+      </div>
+      
+      <div className={`${styles.downloadButton} ${styles.downloadButtonAnimated}`}>
+        <a href="/Portafolio.pdf" download>
+        Descargar Portafolio
+        </a>
       </div>
     </nav>
       

@@ -5,6 +5,7 @@ export const projectData = [
       description:
         'This project was developed with next.js has several layers .',
       gitHubLink: 'https://github.com/Estebanjgg/EstebanPortafolio',
+      gitHubLinkDemo:'',
     },
     {
       id: 2,
@@ -12,6 +13,7 @@ export const projectData = [
       description:
         'It is a random quote generator of various naruto characters with different images.',
       gitHubLink: 'https://github.com/Estebanjgg/generador-citas-naruto',
+      gitHubLinkDemo:'',
     },
     {
       id: 3,
@@ -19,6 +21,7 @@ export const projectData = [
       description:
         'This project was created for the management of household account calculations, allowing users to keep track of shared expenses and debts.',
       gitHubLink: 'https://github.com/Estebanjgg/conta-hogar',
+      gitHubLinkDemo:'',
     },
     {
       id: 4,
@@ -26,6 +29,7 @@ export const projectData = [
       description:
         'This project integrates OpenAIs ChatGPT 3.5 language model with Slack using the Slack Bolt library for Python. The bot responds to questions and requests in Slack..',
       gitHubLink: 'https://github.com/Estebanjgg/chatgpt---slack',
+      gitHubLinkDemo:'',
     },
     {
       id: 5,
@@ -33,5 +37,6 @@ export const projectData = [
       description:
         'This was developed in very simple python but with valuable object oriented concepts..',
       gitHubLink: 'https://github.com/Estebanjgg/jogos',
+      gitHubLinkDemo:'',
     },
   ];
