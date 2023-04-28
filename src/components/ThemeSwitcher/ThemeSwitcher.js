@@ -10,10 +10,15 @@ const ThemeSwitcher = () => {
   };
 
   return (
-    <button className={`${styles.button} ${theme === "light" ? styles.light : ""}`} onClick={toggleTheme}>
+    <div className={styles.buttonContainer}>
+    <button
+      className={`${styles.button} ${theme === "light" ? styles.light : ""}`}
+      onClick={toggleTheme}
+    >
       {theme === "light" ? "Switch to Dark Mode" : "Switch to Light Mode"}
     </button>
-  );
+  </div>
+);
 };
 
 export default ThemeSwitcher;

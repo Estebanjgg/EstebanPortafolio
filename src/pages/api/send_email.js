@@ -10,8 +10,8 @@ export default async function sendEmail(req, res) {
     const { name, email, message } = req.body;
 
     const content = {
-      to: 'esteban030990@gmail.com', // Reemplaza con tu correo electrónico
-      from: 'esteban030990@hotmail.com', // Utiliza la dirección de correo electrónico verificada
+      to: process.env.TO_EMAIL,
+      from: process.env.FROM_EMAIL, 
       subject: `Nueva sugerencia de ${name}`,
       text: message,
       html: `<p>${message}</p>`
@@ -19,13 +19,13 @@ export default async function sendEmail(req, res) {
 
     try {
       await sgMail.send(content);
-      res.status(200).send('Mensaje enviado correctamente');
+      res.status(200).send('Message sent successfully');
     } catch (error) {
-      console.error("Error al enviar el correo:", error);
-      console.error("Error detallado:", error.response.body.errors);
-      res.status(500).json({ status: "Error al enviar el correo" });
+      console.error("Error sending mail:", error);
+      console.error("Detailed error:", error.response.body.errors);
+      res.status(500).json({ status: "Error sending mail" });
     }
   } else {
-    res.status(400).send('Método no permitido');
+    res.status(400).send('Method not allowed');
   }
 }

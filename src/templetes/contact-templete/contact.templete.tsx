@@ -1,17 +1,8 @@
 import { useState, useEffect, ChangeEvent, FormEvent } from "react";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faPhone,
-  faEnvelope,
-  faHeart,
-} from "@fortawesome/free-solid-svg-icons";
-import {
-  faFacebook,
-  faInstagram,
-  faLinkedin,
-  faGithub,
-} from "@fortawesome/free-brands-svg-icons";
+import {  faPhone,  faEnvelope,  faHeart,} from "@fortawesome/free-solid-svg-icons";
+import {  faFacebook,  faInstagram,  faLinkedin,  faGithub,} from "@fortawesome/free-brands-svg-icons";
 import styles from "./contact.module.css";
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 
@@ -80,14 +71,14 @@ const ContactTemplete: React.FC = () => {
     });
 
     if (res.status === 200) {
-      alert("Mensaje enviado correctamente");
+      alert("Message sent successfully");
       setFormData({
         name: "",
         email: "",
         message: "",
       });
     } else {
-      alert("Error al enviar el mensaje");
+      alert("Error sending message");
     }
   };
 
@@ -125,16 +116,16 @@ const ContactTemplete: React.FC = () => {
       <div className={styles.imageContainer}>
         <Image
           src={"https://i.postimg.cc/LRn0QV7D/about.gif"}
-          alt="Imagen de contacto"
+          alt="Contact image"
           width={400}
           height={400}
           className={`${styles.image} ${isImageClicked ? styles.enlarged : styles["rounded-image"]}`}
           onClick={handleClick}
         />
         <div className={styles.suggestionsContainer}>
-      <h2>Sugerencias</h2>
+      <h2>Suggestion Box</h2>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="name">Nombre</label>
+        <label htmlFor="name">Name</label>
         <input
           type="text"
           id="name"
@@ -144,7 +135,7 @@ const ContactTemplete: React.FC = () => {
           required
         />
 
-        <label htmlFor="email">Correo electrónico</label>
+        <label htmlFor="email">E-mail address</label>
         <input
           type="email"
           id="email"
@@ -154,7 +145,7 @@ const ContactTemplete: React.FC = () => {
           required
         />
 
-        <label htmlFor="message">Mensaje</label>
+        <label htmlFor="message">Message</label>
         <textarea
           id="message"
           name="message"
@@ -163,7 +154,7 @@ const ContactTemplete: React.FC = () => {
           required
         />
 
-        <button type="submit">Enviar</button>
+        <button type="submit">Send to</button>
         <button
           type="reset"
           onClick={() =>
@@ -174,7 +165,7 @@ const ContactTemplete: React.FC = () => {
             })
           }
         >
-          Limpiar
+          Clean
         </button>
       </form>
     </div>

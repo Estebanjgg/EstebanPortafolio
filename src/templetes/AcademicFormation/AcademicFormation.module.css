@@ -76,7 +76,10 @@
 .teste:hover {
   background-color: #0062cc;
 }
-
+.trainingTitle,
+.coursesTitle{
+  font-size: 2rem;
+}
 /* Media queries for responsiveness */
 @media (max-width: 1024px) {
   .carouselItem {
@@ -92,7 +95,7 @@
 
   .trainingTitle,
   .coursesTitle {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 }
 
