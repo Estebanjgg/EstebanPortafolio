@@ -19,6 +19,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/Layout/Layout.js", "components/Navbar.js", "components/Footer.js", "pages/about.js", "pages/contact.js", "pages/projects.js", "components/Card.js", "components/Footer/Footer.js", "components/NavBar/Navbar.js", "src/components/ThemeSwitcher/ThemeSwitcher.txs", "src/pages/_app.js", "src/components/ThemeSwitcher/ThemeSwitcher.js", "src/components/NavBar/Navbar.jsx", "src/templetes/about-templete/about.jsx", "src/components/Footer/Footer.jsx", "src/pages/about.jsx", "src/pages/index.jsx", "src/pages/projects.jsx", "src/pages/acadenicFormation.js", "src/pages/acadenicFormation.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/Layout/Layout.js", "components/Navbar.js", "components/Footer.js", "pages/about.js", "pages/contact.js", "pages/projects.js", "components/Card.js", "components/Footer/Footer.js", "components/NavBar/Navbar.js", "src/components/ThemeSwitcher/ThemeSwitcher.txs", "src/pages/_app.js", "src/components/ThemeSwitcher/ThemeSwitcher.js", "src/components/NavBar/Navbar.jsx", "src/templetes/about-templete/about.jsx", "src/components/Footer/Footer.jsx", "src/pages/about.jsx", "src/pages/index.jsx", "src/pages/projects.jsx", "src/pages/acadenicFormation.js", "src/pages/acadenicFormation.jsx", "src/templetes/contact-templete/contact.templete.jsx", "utils/sendgrid.mjs", "utils/send-email-module.mjs", "src/pages/api/send_email.js"],
   "exclude": ["node_modules"]
 }
