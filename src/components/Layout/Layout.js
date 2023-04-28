@@ -3,7 +3,7 @@ import Navbar from "../NavBar/Navbar";
 import Footer from "../Footer/Footer";
 import { useTheme } from "../ThemeSwitcher/ThemeContext";
 
-const Layout = ({ children }) => {
+const  Layout = ({ children }) => {
   const { currentTheme } = useTheme();
   
   return (
@@ -14,3 +14,4 @@ const Layout = ({ children }) => {
     </div>
   );
 }
+export default Layout;
