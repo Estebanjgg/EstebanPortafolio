@@ -21,77 +21,20 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
       rtl: true,
       additionalTransform: 50,
       responsive: [
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1,
-          },
-        },
-      ],
-      responsive: [
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 1,
-          },
-        },
-        {
-          breakpoint: 980,
-          settings: {
-            slidesToShow: 1,
-          },
-        },
-        {
-          breakpoint: 317,
-          settings: {
-            slidesToShow: 1,
-          },
-        },
-        {
-          breakpoint: 1600,
-          settings: {
-            slidesToShow: 1,
-          },
-        },
-        {
-          breakpoint: 1920,
-          settings: {
-            slidesToShow: 1,
-          },
-        },
-        {
-          breakpoint: 2560,
-          settings: {
-            slidesToShow: 1,
-          },
-        },
-        {
-          breakpoint: 3840,
-          settings: {
-            slidesToShow: 1,
-          },
-        },
-        {
-          breakpoint: 1080,
-          settings: {
-            slidesToShow: 1,
-          },
-        },
-        {
-          breakpoint: 5120,
-          settings: {
-            slidesToShow: 1,
-          },
-        },
-        {
-          breakpoint: 6144,
-          settings: {
-            slidesToShow: 1,
-          },
-        },
+        { breakpoint: 480, settings: { slidesToShow: 1 } },
+        { breakpoint: 576, settings: { slidesToShow: 1 } },
+        { breakpoint: 768, settings: { slidesToShow: 1 } },
+        { breakpoint: 980, settings: { slidesToShow: 1 } },
+        { breakpoint: 1080, settings: { slidesToShow: 1 } },
+        { breakpoint: 1920, settings: { slidesToShow: 1 } },
+        { breakpoint: 2560, settings: { slidesToShow: 1 } },
+        { breakpoint: 3840, settings: { slidesToShow: 1 } },
+        { breakpoint: 4096, settings: { slidesToShow: 1 } },
+        { breakpoint: 5120, settings: { slidesToShow: 1 } },
+        { breakpoint: 6144, settings: { slidesToShow: 1 } },
       ],
     };
-  
+    
     const settingsCourses = {
       dots: false,
       infinite: true,
@@ -105,74 +48,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
       rtl: true,
       additionalTransform: 50,
       responsive: [
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1,
-          },
-        },
-      ],
-      responsive: [
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 2,
-          },
-        },
-        {
-          breakpoint: 980,
-          settings: {
-            slidesToShow: 2,
-          },
-        },
-        {
-          breakpoint: 1080,
-          settings: {
-            slidesToShow: 1,
-          },
-        },
-        {
-          breakpoint: 317,
-          settings: {
-            slidesToShow: 1,
-          },
-        },
-        {
-          breakpoint: 1920,
-          settings: {
-            slidesToShow: 1,
-          },
-        },
-        {
-          breakpoint: 2560,
-          settings: {
-            slidesToShow: 7,
-          },
-        },
-        {
-          breakpoint: 3840,
-          settings: {
-            slidesToShow: 1,
-          },
-        },
-        {
-          breakpoint: 4096,
-          settings: {
-            slidesToShow: 1,
-          },
-        },
-        {
-          breakpoint: 5120,
-          settings: {
-            slidesToShow: 1,
-          },
-        },
-        {
-          breakpoint: 6144,
-          settings: {
-            slidesToShow: 1,
-          },
-        },
+        { breakpoint: 480, settings: { slidesToShow: 1 } },
+        { breakpoint: 576, settings: { slidesToShow: 1 } },
+        { breakpoint: 768, settings: { slidesToShow: 2 } },
+        { breakpoint: 980, settings: { slidesToShow: 2 } },
+        { breakpoint: 1080, settings: { slidesToShow: 1 } },
+        { breakpoint: 1920, settings: { slidesToShow: 1 } },
+        { breakpoint: 2560, settings: { slidesToShow: 1 } },
+        { breakpoint: 3840, settings: { slidesToShow: 1 } },
+        { breakpoint: 4096, settings: { slidesToShow: 1 } },
+        { breakpoint: 5120, settings: { slidesToShow: 1 } },
+        { breakpoint: 6144, settings: { slidesToShow: 1 } },
       ],
     };
     
@@ -198,7 +84,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
           </div>
         </section>
         <section className={styles.coursesSection}>
-          <h2 className={styles.coursesTitle}>Cursos</h2>
+          <h2 className={styles.coursesTitle}>Courses</h2>
           <div className={styles.carousel}>
             <Slider {...settingsCourses}>
               {courses.map((course, index) => (
@@ -207,7 +93,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
                   <div className={styles.itemInfo}>
                     <h3>{course.title}</h3>
                     <p>{course.year}</p>
-                    <a href={course.urlCredencial} target="_blank" rel="noopener noreferrer" className={styles.teste}> Mostrar credencial <i class="fa fa-rocket" aria-hidden="true"></i></a>
+                    <a href={course.urlCredencial} target="_blank" rel="noopener noreferrer" className={styles.teste}> Show credentials <i class="fa fa-rocket" aria-hidden="true"></i></a>
                     
                   </div>
                 </div>

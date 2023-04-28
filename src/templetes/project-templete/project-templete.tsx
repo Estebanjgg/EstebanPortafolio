@@ -41,14 +41,14 @@ const ProjectsTemplete = () => {
         aria-labelledby="alert-dialog-title"
         aria-describedby="alert-dialog-description"
       >
-        <DialogTitle id="alert-dialog-title">{"No hay demo disponible"}</DialogTitle>
+        <DialogTitle id="alert-dialog-title">{"No demo available"}</DialogTitle>
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-            Por el momento no tenemos demo para este repositorio.
+          At the moment we do not have a demo for this repository.
           </DialogContentText>
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleCloseDialog}>Cerrar</Button>
+          <Button onClick={handleCloseDialog}>Close</Button>
         </DialogActions>
       </Dialog>
 

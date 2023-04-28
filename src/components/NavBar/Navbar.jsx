@@ -3,12 +3,17 @@ import Link from "next/link";
 import styles from "./Navbar.module.css";
 import Snackbar from "@mui/material/Snackbar";
 import MuiAlert from "@mui/material/Alert";
+import { IconButton } from "@material-ui/core";
+import Brightness4Icon from "@material-ui/icons/Brightness4";
+import Brightness7Icon from "@material-ui/icons/Brightness7";
+import { useTheme } from "../ThemeSwitcher/ThemeContext";
 
 const Alert = React.forwardRef(function Alert(props, ref) {
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
 });
 
 const Navbar = () => {
+  const { theme, setTheme, currentTheme } = useTheme();
   const [open, setOpen] = useState(false);
 
   const handleDownloadClick = () => {
@@ -25,8 +30,12 @@ const Navbar = () => {
     setOpen(false);
   };
 
+  const toggleTheme = () => {
+    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+  };
+
   return (
-    <nav className={styles.navbar}>
+    <nav className={styles.navbar} style={{ backgroundColor: currentTheme.backgroundColor, color: currentTheme.color }}>
       <div className={styles.links}>
         <Link href="/" legacyBehavior>
           <a>Home</a>
@@ -44,9 +53,13 @@ const Navbar = () => {
 
       <div className={`${styles.downloadButton} ${styles.downloadButtonAnimated}`}>
         <a href="/Portafolio.pdf" download onClick={handleDownloadClick}>
-          Descargar Portafolio
+          Download Portfolio
         </a>
       </div>
+
+      <IconButton onClick={toggleTheme}>
+        {theme === "light" ? <Brightness4Icon /> : <Brightness7Icon />}
+      </IconButton>
 
       <Snackbar
         open={open}
@@ -61,7 +74,7 @@ const Navbar = () => {
         }}
       >
         <Alert onClose={handleClose} severity="success" sx={{ width: "100%" }}>
-          La descarga comenzará pronto...
+          Download will start soon...
         </Alert>
       </Snackbar>
     </nav>

@@ -5,6 +5,7 @@ import { AboutTemplete } from "../templetes";
 import { ContactTemplete } from "../templetes";
 import { ProjectsTemplete } from "../templetes";
 import { AcademicFormation } from '../templetes';
+import { ThemeProvider } from '../components/ThemeSwitcher/ThemeContext';
 
 interface FormationData {
   title: string;
@@ -32,14 +33,14 @@ export default function Home() {
     fetchData();
   }, []);
   return (
-    <>
+    <><ThemeProvider>
       <Hero/>
       <Skill/>
       <AcademicFormation trainings={formationData.trainings} courses={formationData.courses} />
       <ProjectsTemplete/>
       <AboutTemplete/>
       <ContactTemplete/>
-
+      </ThemeProvider>
     </>
   )
 }
