@@ -20,6 +20,76 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
       cssEase: 'linear',
       rtl: true,
       additionalTransform: 50,
+      responsive: [
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+          },
+        },
+      ],
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+          },
+        },
+        {
+          breakpoint: 980,
+          settings: {
+            slidesToShow: 1,
+          },
+        },
+        {
+          breakpoint: 317,
+          settings: {
+            slidesToShow: 1,
+          },
+        },
+        {
+          breakpoint: 1600,
+          settings: {
+            slidesToShow: 1,
+          },
+        },
+        {
+          breakpoint: 1920,
+          settings: {
+            slidesToShow: 1,
+          },
+        },
+        {
+          breakpoint: 2560,
+          settings: {
+            slidesToShow: 1,
+          },
+        },
+        {
+          breakpoint: 3840,
+          settings: {
+            slidesToShow: 1,
+          },
+        },
+        {
+          breakpoint: 4096,
+          settings: {
+            slidesToShow: 1,
+          },
+        },
+        {
+          breakpoint: 5120,
+          settings: {
+            slidesToShow: 10,
+          },
+        },
+        {
+          breakpoint: 6144,
+          settings: {
+            slidesToShow: 1,
+          },
+        },
+      ],
     };
   
     const settingsCourses = {
@@ -33,7 +103,79 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
       autoplaySpeed: 1000,
       cssEase: 'linear',
       rtl: true,
+      additionalTransform: 50,
+      responsive: [
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+          },
+        },
+      ],
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+          },
+        },
+        {
+          breakpoint: 980,
+          settings: {
+            slidesToShow: 2,
+          },
+        },
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 4,
+          },
+        },
+        {
+          breakpoint: 317,
+          settings: {
+            slidesToShow: 1,
+          },
+        },
+        {
+          breakpoint: 1920,
+          settings: {
+            slidesToShow: 6,
+          },
+        },
+        {
+          breakpoint: 2560,
+          settings: {
+            slidesToShow: 7,
+          },
+        },
+        {
+          breakpoint: 3840,
+          settings: {
+            slidesToShow: 8,
+          },
+        },
+        {
+          breakpoint: 4096,
+          settings: {
+            slidesToShow: 9,
+          },
+        },
+        {
+          breakpoint: 5120,
+          settings: {
+            slidesToShow: 10,
+          },
+        },
+        {
+          breakpoint: 6144,
+          settings: {
+            slidesToShow: 11,
+          },
+        },
+      ],
     };
+    
 
   return (
     <div className={styles.carouselContainer}>
