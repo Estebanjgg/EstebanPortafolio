@@ -1,16 +1,17 @@
 import Layout from "../components/Layout/Layout";
 import "../styles/globals.css";
-import { ThemeProvider } from "../components/ThemeSwitcher/ThemeContext";
+
+import { useTheme } from "../components/ThemeSwitcher/ThemeContext";
 
 
 function MyApp({ Component, pageProps }) {
-  
+  const { currentTheme } = useTheme();
   return (
-    <ThemeProvider>
+    <div style={currentTheme}>
       <Layout>
         <Component {...pageProps} />
       </Layout>
-      </ThemeProvider>
+      </div>
   );
 }
 
