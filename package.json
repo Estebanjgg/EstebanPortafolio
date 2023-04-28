@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "send-test-email": "tsc && node send-test-email.ts"
   },
   "dependencies": {
     "@emotion/react": "^11.10.6",
@@ -22,27 +23,31 @@
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.12.2",
     "@mui/styled-engine-sc": "^5.11.11",
+    "@sendgrid/mail": "^7.7.0",
     "@types/body-parser": "^1.19.2",
     "@types/node": "18.15.11",
     "@types/react": "18.0.34",
     "@types/react-dom": "18.0.11",
     "@types/styled-components": "^5.1.26",
     "body-parser": "^1.20.2",
+    "dotenv": "^16.0.3",
     "firebase": "^9.19.1",
     "firebase-admin": "^11.6.0",
     "font-awesome": "^4.7.0",
     "i18next": "^22.4.14",
     "i18next-browser-languagedetector": "^7.0.1",
     "install": "^0.13.0",
+    "json-loader": "^0.5.7",
     "next": "^13.3.1",
     "npm": "^9.6.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-hook-form": "^7.43.9",
     "react-i18next": "^12.2.0",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.9",
     "swiper": "^9.2.4",
-    "typescript": "5.0.4"
+    "typescript": "^5.0.4"
   }
 }

@@ -1,8 +1,7 @@
 /* AcademicFormation.module.css */
 .container {
   max-width: 1900px;
-  align-items: center;
-  margin-left: 10px;
+  align-items: center;  
 }
 
 .trainingSection,
@@ -17,7 +16,6 @@
   font-weight: bold;
   margin-bottom: 1rem;
 }
-
 
 .carouselItem {
   min-width: 200px;
@@ -68,12 +66,43 @@
   margin-bottom: 1rem;
 }
 
-.teste{
+.teste {
   background-color: aqua;
   color: black;
   text-align: center;
   width: 60%;
 }
+
 .teste:hover {
   background-color: #0062cc;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 1024px) {
+  .carouselItem {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .carouselItem {
+    max-width: 100%;
+  }
+
+  .trainingTitle,
+  .coursesTitle {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .trainingTitle,
+  .coursesTitle {
+    font-size: 1.5rem;
+  }
+
+  .itemInfo h3 {
+    font-size: 1.1rem;
+  }
 }

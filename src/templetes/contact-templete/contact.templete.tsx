@@ -1,4 +1,4 @@
-import { useState, useEffect  } from "react";
+import { useState, useEffect, ChangeEvent, FormEvent } from "react";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -13,10 +13,15 @@ import {
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
 import styles from "./contact.module.css";
-
 import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
 
-const Icon = ({ icon }: { icon: IconDefinition }) => {
+
+
+type IconProps = {
+  icon: IconDefinition;
+};
+
+const Icon: React.FC<IconProps> = ({ icon }) => {
   const [clicked, setClicked] = useState(false);
 
   useEffect(() => {
@@ -33,18 +38,57 @@ const Icon = ({ icon }: { icon: IconDefinition }) => {
   };
   return (
     <FontAwesomeIcon
-    icon={icon}
-    className={`${styles.faicon} ${clicked ? styles.clicked : ""}`}
-    onClick={handleClick}
+      icon={icon}
+      className={`${styles.faicon} ${clicked ? styles.clicked : ""}`}
+      onClick={handleClick}
     />
   );
 };
 
-export default function ContactTemplate() {
+type FormData = {
+  name: string;
+  email: string;
+  message: string;
+};
+
+const ContactTemplete: React.FC = () => {
   const [isImageClicked, setIsImageClicked] = useState(false);
+  const [formData, setFormData] = useState<FormData>({
+    name: "",
+    email: "",
+    message: "",
+  });
 
   const handleClick = () => {
     setIsImageClicked(!isImageClicked);
+  };
+
+  const handleChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = event.target;
+    setFormData((prevState) => ({ ...prevState, [name]: value }));
+  };
+
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    const res = await fetch("/api/send_email", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
+
+    if (res.status === 200) {
+      alert("Mensaje enviado correctamente");
+      setFormData({
+        name: "",
+        email: "",
+        message: "",
+      });
+    } else {
+      alert("Error al enviar el mensaje");
+    }
   };
 
   return (
@@ -87,7 +131,56 @@ export default function ContactTemplate() {
           className={`${styles.image} ${isImageClicked ? styles.enlarged : styles["rounded-image"]}`}
           onClick={handleClick}
         />
-      </div>
+        <div className={styles.suggestionsContainer}>
+      <h2>Sugerencias</h2>
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="name">Nombre</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          value={formData.name}
+          onChange={handleChange}
+          required
+        />
+
+        <label htmlFor="email">Correo electrónico</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          value={formData.email}
+          onChange={handleChange}
+          required
+        />
+
+        <label htmlFor="message">Mensaje</label>
+        <textarea
+          id="message"
+          name="message"
+          value={formData.message}
+          onChange={handleChange}
+          required
+        />
+
+        <button type="submit">Enviar</button>
+        <button
+          type="reset"
+          onClick={() =>
+            setFormData({
+              name: "",
+              email: "",
+              message: "",
+            })
+          }
+        >
+          Limpiar
+        </button>
+      </form>
+    </div>
+  </div>
+
     </div>
   );
 }
+export default ContactTemplete;

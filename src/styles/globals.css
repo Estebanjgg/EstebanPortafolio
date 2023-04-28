@@ -20,6 +20,8 @@ body {
   font-family: Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
+  margin: 0; /* Asegurarse de que el margen sea 0 */
+  padding: 0; /* Asegurarse de que el relleno sea 0 */
 }
 
 a {
