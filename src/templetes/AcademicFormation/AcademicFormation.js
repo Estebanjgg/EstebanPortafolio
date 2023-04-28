@@ -32,7 +32,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
         {
           breakpoint: 768,
           settings: {
-            slidesToShow: 2,
+            slidesToShow: 1,
           },
         },
         {
@@ -72,7 +72,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
           },
         },
         {
-          breakpoint: 4096,
+          breakpoint: 1080,
           settings: {
             slidesToShow: 1,
           },
@@ -80,7 +80,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
         {
           breakpoint: 5120,
           settings: {
-            slidesToShow: 10,
+            slidesToShow: 1,
           },
         },
         {
@@ -126,9 +126,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
           },
         },
         {
-          breakpoint: 1200,
+          breakpoint: 1080,
           settings: {
-            slidesToShow: 4,
+            slidesToShow: 1,
           },
         },
         {
@@ -140,7 +140,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
         {
           breakpoint: 1920,
           settings: {
-            slidesToShow: 6,
+            slidesToShow: 1,
           },
         },
         {
@@ -152,25 +152,25 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
         {
           breakpoint: 3840,
           settings: {
-            slidesToShow: 8,
+            slidesToShow: 1,
           },
         },
         {
           breakpoint: 4096,
           settings: {
-            slidesToShow: 9,
+            slidesToShow: 1,
           },
         },
         {
           breakpoint: 5120,
           settings: {
-            slidesToShow: 10,
+            slidesToShow: 1,
           },
         },
         {
           breakpoint: 6144,
           settings: {
-            slidesToShow: 11,
+            slidesToShow: 1,
           },
         },
       ],
