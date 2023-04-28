@@ -33,14 +33,13 @@ export default function Home() {
     fetchData();
   }, []);
   return (
-    <><ThemeProvider>
+    <>
       <Hero/>
       <Skill/>
       <AcademicFormation trainings={formationData.trainings} courses={formationData.courses} />
       <ProjectsTemplete/>
       <AboutTemplete/>
       <ContactTemplete/>
-      </ThemeProvider>
     </>
   )
 }
