@@ -17,7 +17,7 @@ const AboutTemplete = () => {
         
         <div className={styles.flexabout}>
           <div className={styles.aboutimg}>
-            <Image src={'https://i.postimg.cc/76h1m2nf/imagen-About.jpg'}  alt="" className={styles.profileimg} width={300} height={500}/>
+            <Image src={'https://i.postimg.cc/50FWdPRc/descarga-removebg-preview.png'}  alt="" className={styles.profileimg} width={500} height={700}/>
           </div>
           <div className={styles.aboutText}>
           <h1>{t('aboutMe')}</h1>
