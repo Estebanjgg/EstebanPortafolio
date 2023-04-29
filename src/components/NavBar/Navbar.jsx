@@ -70,15 +70,15 @@ const Navbar = () => {
       <div
         className={`${styles.downloadButton} ${styles.downloadButtonAnimated}`}
       >
-        <a href="/Portafolio.pdf" download onClick={handleDownloadClick}>
+        <a href="/Portafolio.pdf" download onClick={handleDownloadClick} >
           Download Portfolio
         </a>
       </div>
 
       <IconButton onClick={toggleTheme}>
   <div style={{ display: 'flex', alignItems: 'center' }}>
-    <ThemeIcon style={{ fill: theme === "light" ? "#000" : "#fff" }} />
-    <span style={{ color: theme === "light" ? "#000" : "#fff" }}>{themeButtonText}</span>
+    <ThemeIcon style={{ fill: theme === "light" ? "#000" : "#f804d8" }} />
+    <span style={{ color: theme === "light" ? "#000" : "#f804d8" }}>{themeButtonText}</span>
   </div>
 </IconButton>
 
