@@ -57,11 +57,10 @@
   height: auto;
   max-height: 500px;
   object-fit: cover;
-  border: 2px solid #dadadb;
   
   cursor: cell;
-  border-radius: 23px; /* Redondea las puntas de la imagen */
-  transition: transform 0.5s ease-in-out; /* Cambia la animación de transición */
+  border-radius: 23px; 
+  transition: transform 0.5s ease-in-out; 
 }
 
 
