@@ -5,6 +5,7 @@ import { AboutTemplete } from "../templetes";
 import { ContactTemplete } from "../templetes";
 import { ProjectsTemplete } from "../templetes";
 import { AcademicFormation } from '../templetes';
+import Head from "next/head";
 import { ThemeProvider } from '../components/ThemeSwitcher/ThemeContext';
 
 interface FormationData {
@@ -34,6 +35,12 @@ export default function Home() {
   }, []);
   return (
     <>
+     <Head>
+        <title>Esteban Gonzalez - Portfolio</title>
+        <meta name="description" content="Esteban Gonzalez portfolio developed using Next.js." />
+        <meta name="keywords" content="Esteban Gonzalez,full stack developer" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <Hero/>
       <Skill/>
       <AcademicFormation trainings={formationData.trainings} courses={formationData.courses} />
