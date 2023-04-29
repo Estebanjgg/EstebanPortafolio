@@ -7,16 +7,18 @@
   background-color: #df0707;
   color: #fff;
   padding: 1rem;
-  box-shadow: 0 0.25rem 1rem rgba(235, 4, 4, 0.1);
+  box-shadow: 0 0.25rem 1rem rgba(3, 3, 3, 0.1);
 }
 
 .links a,
 .downloadButton a {
+  margin-top: 10px;
+  height: 30px;
   margin-left: 1rem;
   color: #fff4f4;
   text-decoration: none;
   display: inline-block;
-  padding: 0.25rem 0.75rem;
+    padding: 0.25rem 0.75rem;
   background-color: rgba(8, 8, 8, 0.50);
   text-align: center;
   border-radius: 3px;
@@ -25,14 +27,14 @@
 .links a:hover,
 .downloadButton a:hover {
   color: #f804d8;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .downloadButton {
-  position: absolute;
-  right: 10%;
-  transform: translateX(-50%);
-  margin-top: 12px;
+  position: static;
+  transform: none;
+  margin-right: 0;
+  margin-top: 0;
 }
 
 @keyframes buttonAnimation {
@@ -47,9 +49,7 @@
   }
 }
 
-.downloadButtonAnimated {
-  animation: buttonAnimation 2s infinite;
-}
+
 
 .hamburger,
 .close {
@@ -94,10 +94,10 @@
 
 .themeButton,
 .hamburger {
-  animation: bounceAnimation 2s infinite;
+  animation: bounceAnimation 1s infinite;
 }
 
-/* Media queries for responsiveness */
+
 @media (max-width: 768px) {
   .navbar {
     flex-wrap: wrap;
@@ -108,29 +108,29 @@
     display: block;
   }
 
-  .links,
+  .links {
+    display: none;
+  }
+
+  .links.open {
+    display: flex;
+  }
+
   .downloadButton {
     display: none;
   }
 
-  .links.open,
   .downloadButton.open {
     display: flex;
-  }
-  .downloadButton {
-    position: static;
-    transform: none;
-    margin-right: 0;
   }
 
   .themeButton {
     position: static;
     left: auto;
   }
-
 }
 
-@media (min-width: 830px) {
+/* @media (min-width: 830px) {
   .themeButton {
     left: 30%;
   }
@@ -152,7 +152,7 @@
   .themeButton {
     left: 115%;
   }
-}
+} */
 
 @media (max-width: 768px) {
   .navbar {
