@@ -4,10 +4,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #333;
+  background-color: #df0707;
   color: #fff;
   padding: 1rem;
-  box-shadow: 0 0.25rem 0.5rem rgba(235, 4, 4, 0.1);
+  box-shadow: 0 0.25rem 1rem rgba(235, 4, 4, 0.1);
+  
 }
 
 .links a,
@@ -24,12 +25,12 @@
 
 .links a:hover,
 .downloadButton a:hover {
-  color: #f80404;
+  color: #b7f804;
   background-color: rgba(255, 255, 255, 0.2);
 }
 
 .downloadButton {
-  margin-left: 2rem;
+  margin-left: 1rem;
 }
 
 @keyframes buttonAnimation {

@@ -3,9 +3,7 @@ import Link from "next/link";
 import styles from "./Navbar.module.css";
 import Snackbar from "@mui/material/Snackbar";
 import MuiAlert from "@mui/material/Alert";
-import { IconButton } from "@material-ui/core";
-import Brightness4Icon from "@material-ui/icons/Brightness4";
-import Brightness7Icon from "@material-ui/icons/Brightness7";
+import { IconButton, SvgIcon } from "@material-ui/core";
 import { useTheme } from "../ThemeSwitcher/ThemeContext";
 
 const Alert = React.forwardRef(function Alert(props, ref) {
@@ -15,6 +13,7 @@ const Alert = React.forwardRef(function Alert(props, ref) {
 const Navbar = () => {
   const { theme, setTheme, currentTheme } = useTheme();
   const [open, setOpen] = useState(false);
+  const [themeButtonText, setThemeButtonText] = useState("Night"); // Nuevo estado para el nombre del botón
 
   const handleDownloadClick = () => {
     setOpen(true);
@@ -31,11 +30,28 @@ const Navbar = () => {
   };
 
   const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+    setTheme((prevTheme) => {
+      const newTheme = prevTheme === "light" ? "dark" : "light";
+      setThemeButtonText(newTheme === "light" ? "Night" : "Light"); // Cambia el nombre del botón al cambiar el tema
+      return newTheme;
+    });
+  };
+  const ThemeIcon = (props) => {
+    return (
+      <SvgIcon {...props}>
+        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm-.89 10.65l.88-.89 1.76 1.76-.88.89z" />
+      </SvgIcon>
+    );
   };
 
   return (
-    <nav className={styles.navbar} style={{ backgroundColor: currentTheme.backgroundColor, color: currentTheme.color }}>
+    <nav
+    className={styles.navbar}
+    style={{
+      backgroundColor: currentTheme.backgroundColor,
+      color: currentTheme.color,
+    }}
+    >
       <div className={styles.links}>
         <Link href="/" legacyBehavior>
           <a>Home</a>
@@ -51,15 +67,20 @@ const Navbar = () => {
         </Link>
       </div>
 
-      <div className={`${styles.downloadButton} ${styles.downloadButtonAnimated}`}>
+      <div
+        className={`${styles.downloadButton} ${styles.downloadButtonAnimated}`}
+      >
         <a href="/Portafolio.pdf" download onClick={handleDownloadClick}>
           Download Portfolio
         </a>
       </div>
 
       <IconButton onClick={toggleTheme}>
-        {theme === "light" ? <Brightness4Icon /> : <Brightness7Icon />}
-      </IconButton>
+  <div style={{ display: 'flex', alignItems: 'center' }}>
+    <ThemeIcon style={{ fill: theme === "light" ? "#000" : "#fff" }} />
+    <span style={{ color: theme === "light" ? "#000" : "#fff" }}>{themeButtonText}</span>
+  </div>
+</IconButton>
 
       <Snackbar
         open={open}

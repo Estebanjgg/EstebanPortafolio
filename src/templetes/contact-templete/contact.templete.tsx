@@ -113,65 +113,69 @@ const ContactTemplete: React.FC = () => {
           </li>
         </ul>
       </div>
-      <div className={styles.imageContainer}>
-        <Image
-          src={"https://i.postimg.cc/LRn0QV7D/about.gif"}
-          alt="Contact image"
-          width={400}
-          height={400}
-          className={`${styles.image} ${isImageClicked ? styles.enlarged : styles["rounded-image"]}`}
-          onClick={handleClick}
-        />
+
+      <div className={styles.contentWrapper}>
+        <div className={styles.imageContainer}>
+          <Image
+            src={"https://i.postimg.cc/LRn0QV7D/about.gif"}
+            alt="Contact image"
+            width={400}
+            height={400}
+            className={`${styles.image} ${isImageClicked ? styles.enlarged : styles["rounded-image"]}`}
+            onClick={handleClick}
+          />
+        </div>
+
         <div className={styles.suggestionsContainer}>
-      <h2>Suggestion Box</h2>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="name">Name</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-          required
-        />
+          <h2>Suggestion Box</h2>
+          <form onSubmit={handleSubmit}>
+            <label htmlFor="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
 
-        <label htmlFor="email">E-mail address</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
+            <label htmlFor="email">E-mail address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
 
-        <label htmlFor="message">Message</label>
-        <textarea
-          id="message"
-          name="message"
-          value={formData.message}
-          onChange={handleChange}
-          required
-        />
+            <label htmlFor="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              required
+            />
 
-        <button type="submit">Send to</button>
-        <button
-          type="reset"
-          onClick={() =>
-            setFormData({
-              name: "",
-              email: "",
-              message: "",
-            })
-          }
-        >
-          Clean
-        </button>
-      </form>
-    </div>
-  </div>
-
+            <button type="submit">Send to</button>
+            <button
+              type="reset"
+              onClick={() =>
+                setFormData({
+                  name: "",
+                  email: "",
+                  message: "",
+                })
+              }
+            >
+              Clean
+            </button>
+          </form>
+        </div>
+      </div>
     </div>
   );
-}
+};
+
 export default ContactTemplete;
