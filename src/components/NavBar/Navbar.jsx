@@ -17,7 +17,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
   const [themeButtonText, setThemeButtonText] = useState("Night");
   const [menuOpen, setMenuOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);;
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -34,7 +34,6 @@ const Navbar = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-
 
   const handleDownloadClick = () => {
     setOpen(true);
@@ -63,7 +62,7 @@ const Navbar = () => {
         <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm-.89 10.65l.88-.89 1.76 1.76-.88.89z" />
       </SvgIcon>
     );
-  }; 
+  };
   return (
     <nav
       className={styles.navbar}
@@ -82,8 +81,9 @@ const Navbar = () => {
           <CloseIcon style={{ fill: theme === "light" ? "#000" : "#f804d8" }} />
         </IconButton>
       </div>
-  
+
       <div className={`${styles.links} ${menuOpen ? styles.open : ""}`}>
+        
         <Link href="/" legacyBehavior>
           <a>Home</a>
         </Link>
@@ -96,25 +96,28 @@ const Navbar = () => {
         <Link href="/projects" legacyBehavior>
           <a>Projects</a>
         </Link>
-  
         <div
-          className={`${styles.downloadButton} ${styles.downloadButtonAnimated}`}
+          className={`${styles.downloadButton} ${menuOpen ? styles.open : ""} ${
+            styles.downloadButtonAnimated
+          }`}
         >
           <a href="/Portafolio.pdf" download onClick={handleDownloadClick}>
             Download Portfolio
           </a>
         </div>
-  
-        <IconButton onClick={toggleTheme} className={styles.themeButton} >
+
+        <IconButton onClick={toggleTheme} className={styles.themeButton}>
           <div style={{ display: "flex", alignItems: "right" }}>
-            <ThemeIcon style={{ fill: theme === "light" ? "#000" : "#f804d8" }} />
+            <ThemeIcon
+              style={{ fill: theme === "light" ? "#000" : "#f804d8" }}
+            />
             <span style={{ color: theme === "light" ? "#000" : "#f804d8" }}>
               {themeButtonText}
             </span>
           </div>
         </IconButton>
       </div>
-  
+
       <Snackbar
         open={open}
         autoHideDuration={3000}
@@ -133,8 +136,6 @@ const Navbar = () => {
       </Snackbar>
     </nav>
   );
-  
-
 };
 
 export default Navbar;
