@@ -39,4 +39,12 @@ export const projectData = [
       gitHubLink: 'https://github.com/Estebanjgg/jogos',
       gitHubLinkDemo:'',
     },
+    {
+      id: 5,
+      title: 'Project with Next.js and the Star Wars API ',
+      description:
+        'This project uses Next.js to build a web application that displays Star Wars character information using the Star Wars API...',
+      gitHubLink: 'https://github.com/Estebanjgg/API-StarWars',
+      gitHubLinkDemo:'https://estebanjgg.github.io/API-StarWars/',
+    },
   ];
