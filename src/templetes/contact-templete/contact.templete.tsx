@@ -117,7 +117,7 @@ const ContactTemplete: React.FC = () => {
       <div className={styles.contentWrapper}>
         <div className={styles.imageContainer}>
           <Image
-            src={"https://i.postimg.cc/LRn0QV7D/about.gif"}
+            src={"https://i.postimg.cc/gkbKXKMq/236695964-807b1716-7d83-4b19-b7d7-837ed3a98ecd.png"}
             alt="Contact image"
             width={400}
             height={400}
